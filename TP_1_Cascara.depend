@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1522085703 source:c:\users\pc-147\desktop\tp_1_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1522079638 c:\users\pc-147\desktop\tp_1_cascara\funciones.h
+
+1522245794 source:f:\trabajo practico\tp_1_cascara\funciones.c
+
+1522241520 source:f:\trabajo practico\tp_1_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1522241494 f:\trabajo practico\tp_1_cascara\funciones.h
+
+1522369302 source:d:\trabajo practico\tp_1_cascara\funciones.c
+
+1522370886 source:d:\trabajo practico\tp_1_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1522369302 d:\trabajo practico\tp_1_cascara\funciones.h
+
+1522704234 source:h:\trabajo practico\tp_1_cascara\funciones.c
+
+1522704378 source:h:\trabajo practico\tp_1_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<stdbool.h>
+
+1522704334 h:\trabajo practico\tp_1_cascara\funciones.h
+
+1522704234 source:c:\users\alejandro\downloads\tp_1_cascara\funciones.c
+
+1522704498 source:c:\users\alejandro\downloads\tp_1_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<stdbool.h>
+
+1522704334 c:\users\alejandro\downloads\tp_1_cascara\funciones.h
+
