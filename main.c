@@ -8,8 +8,8 @@ int main()
 {
     char seguir='s';
     int opcion;
-    float valorA;
-    float valorB;
+    float valorA=0;
+    float valorB=0;
     float resultado=0;
 
 
