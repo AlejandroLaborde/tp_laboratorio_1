@@ -1,0 +1,130 @@
+# depslib dependency file v1.0
+1524829346 source:f:\tp2\tp_2_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+
+1524830146 f:\tp2\tp_2_cascara\funciones.h
+
+1524944644 source:i:\tp2\tp_2_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funciones.h"
+
+1525008532 i:\tp2\tp_2_cascara\funciones.h
+
+1525007532 source:i:\tp2\tp_2_cascara\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funciones.h"
+
+1524830548 source:f:\tp2\tp_2_cascara\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funciones.h"
+
+1524617056 source:e:\tp2\tp_2_cascara\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+
+1524617056 e:\tp2\tp_2_cascara\funciones.h
+
+1524617950 source:e:\tp2\tp_2_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+
+1525699720 source:i:\trabajo practico 2 laborde parodi alejandro\trabajo practico 2 laborde parodi alejandro\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funciones.h"
+	"FuncionesImput.h"
+
+1525639148 i:\trabajo practico 2 laborde parodi alejandro\trabajo practico 2 laborde parodi alejandro\funciones.h
+
+1525639030 source:i:\trabajo practico 2 laborde parodi alejandro\trabajo practico 2 laborde parodi alejandro\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funciones.h"
+	"FuncionesImput.h"
+
+1525607604 source:i:\trabajo practico 2 laborde parodi alejandro\trabajo practico 2 laborde parodi alejandro\funcionesimput.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<time.h>
+	"funciones.h"
+
+1525607612 i:\trabajo practico 2 laborde parodi alejandro\trabajo practico 2 laborde parodi alejandro\funcionesimput.h
+
+1525607894 source:d:\trabajo practico 2 laborde parodi alejandro\trabajo practico 2 laborde parodi alejandro\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funciones.h"
+	"FuncionesImput.h"
+
+1525639148 d:\trabajo practico 2 laborde parodi alejandro\trabajo practico 2 laborde parodi alejandro\funciones.h
+
+1525607612 d:\trabajo practico 2 laborde parodi alejandro\trabajo practico 2 laborde parodi alejandro\funcionesimput.h
+
+1525607604 source:d:\trabajo practico 2 laborde parodi alejandro\trabajo practico 2 laborde parodi alejandro\funcionesimput.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<time.h>
+	"funciones.h"
+
+1525639030 source:d:\trabajo practico 2 laborde parodi alejandro\trabajo practico 2 laborde parodi alejandro\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funciones.h"
+	"FuncionesImput.h"
+
+1525607604 source:f:\trabajo practico 2 laborde parodi alejandro\trabajo practico 2 laborde parodi alejandro\funcionesimput.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<time.h>
+	"funciones.h"
+
+1525639148 f:\trabajo practico 2 laborde parodi alejandro\trabajo practico 2 laborde parodi alejandro\funciones.h
+
+1526057488 source:f:\trabajo practico 2 laborde parodi alejandro\trabajo practico 2 laborde parodi alejandro\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funciones.h"
+	"FuncionesImput.h"
+
+1525607612 f:\trabajo practico 2 laborde parodi alejandro\trabajo practico 2 laborde parodi alejandro\funcionesimput.h
+
+1525707340 source:f:\trabajo practico 2 laborde parodi alejandro\trabajo practico 2 laborde parodi alejandro\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funciones.h"
+	"FuncionesImput.h"
+
