@@ -63,17 +63,32 @@
 
 1527825486 i:\trabajo practico 3\trabajo practico 3 laborde parodi alejandro\funcionesimput.h
 
-1527861944 source:f:\trabajo practico 3\trabajo practico 3 laborde parodi alejandro\funcionestp3.c
+1527872076 source:f:\trabajo practico 3\trabajo practico 3 laborde parodi alejandro\funcionestp3.c
 	<stdio.h>
 	<stdlib.h>
 	"funcionesTP3.h"
 	<string.h>
+	"FuncionesImput.h"
 
-1527858046 f:\trabajo practico 3\trabajo practico 3 laborde parodi alejandro\funcionestp3.h
+1527865922 f:\trabajo practico 3\trabajo practico 3 laborde parodi alejandro\funcionestp3.h
 
-1527828250 source:f:\trabajo practico 3\trabajo practico 3 laborde parodi alejandro\main.c
+1527868504 source:f:\trabajo practico 3\trabajo practico 3 laborde parodi alejandro\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"FuncionesImput.h"
+	"funcionesTP3.h"
+
+1527871926 source:f:\trabajo practico 3\trabajo practico 3 laborde parodi alejandro\funcionesimput.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
-	"funcionesTP3.h"
+	<ctype.h>
+	<time.h>
+	"funciones.h"
+
+1525639148 f:\trabajo practico 3\trabajo practico 3 laborde parodi alejandro\funciones.h
+
+1527869078 f:\trabajo practico 3\trabajo practico 3 laborde parodi alejandro\funcionesimput.h
 

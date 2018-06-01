@@ -183,24 +183,11 @@ int esTelefono(char str[])
  * \param input Array donde se cargar· el texto ingresado
  * \return void
  */
-int getString(char cadena[], int tamanio)
+void getString(char mensaje[],char input[])
 {
-   int longi, ch;
-
-   setbuf(stdin, NULL);
-   fgets (cadena, tamanio, stdin);
-   longi=strlen(cadena);
-
-   if (cadena[longi-1] == '\n') {
-       cadena[longi-1] = '\0';
-   }
-   else {
-       while ((ch = getchar()) != '\n' && ch != EOF);
-   }
-
-   return (strlen(cadena));
+    printf("%s",mensaje);
+    scanf ("%s", input);
 }
-
 
 /**
  * \brief Solicita un texto al usuario y lo devuelve (acpeta espacios)
@@ -227,7 +214,7 @@ void getStringNombre(char mensaje[], char input[])
 int getStringLetras(char mensaje[],char input[])
 {
     char aux[256];
-    //getString(mensaje,aux);
+    getString(mensaje,aux);
     if(esSoloLetras(aux))
     {
         strcpy(input,aux);
@@ -337,8 +324,9 @@ int getValidInt(char requestMessage[],char errorMessage[], int lowLimit, int hiL
             continue;
 
         }
-        return auxInt;
+
     }
+    return auxInt;
 }
 
 /**
@@ -413,9 +401,6 @@ void cleanStdin(void)
     }
     while (c != '\n' && c != EOF);
 }
-
-
-
 
 /** \brief
  * Funcion para limpiar la pantalla de la consola

@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include <string.h>
+#include "FuncionesImput.h"
 #include "funcionesTP3.h"
 #define ARCHIVOBINARIO ".\\PeliculasBinario.dat"
 #define ARCHIVOTEXTO ".\\PeliculasTexto.html"
@@ -50,6 +52,10 @@ int main()
                 break;
             case 9:
                 harcodeaPeliculas(pelicula,archivoBin);
+                break;
+            default:
+                system("cls");
+                imprime("El valor ingresado es incorrecto\n\n");
                 break;
 
         }

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "funcionesTP3.h"
 #include <string.h>
+#include "FuncionesImput.h"
 #define ARCHIVOBINARIO ".\\PeliculasBinario.dat"
 #define ARCHIVOTEXTO ".\\PeliculasTexto.html"
 
@@ -13,16 +14,16 @@ int agregarPelicula(EMovie pelicula, FILE*archivoBin)
     imprime("Ingrese Nombre de la pelicula: \n");
     setbuf(stdin,NULL);
     scanf("%[^\n]",pelicula.titulo);
-    setbuf(stdin,NULL);
+
     imprime("Ingrese el genero de la pelicula: \n");
+    setbuf(stdin,NULL);
     scanf("%[^\n]",pelicula.genero);
-    imprime("Ingrese la duracion de la pelicula: \n");
-    scanf("%d",&pelicula.duracion);
+    pelicula.duracion=getValidInt("Ingrese la duracion de la pelicula en minutos: ","El valor ingresado es incorrecto",45,180);
     setbuf(stdin,NULL);
     imprime("Ingrese la descripcion: \n");
     scanf("%[^\n]",pelicula.descripcion);
     imprime("Ingrese el puntaje de la pelicula: \n");
-    scanf("%d",&pelicula.puntaje);
+    pelicula.puntaje=getValidInt("Ingrese el puntaje de la pelicula: ","Elvalor ingresado es incorrecto",1,10);
     setbuf(stdin,NULL);
     imprime("Ingrese el link de la imagen de portada de la pelicula: \n");
     scanf("%s",pelicula.linkImagen);
@@ -58,7 +59,7 @@ int borrarPelicula(FILE*archivoBin,EMovie pelicula)
 			break;
          }
          else{
-			printf("No llego a leer el ultimo registro");
+			printf("No llego a leer el ultimo registro\n");
 			break;
          }
       }
@@ -69,7 +70,7 @@ int borrarPelicula(FILE*archivoBin,EMovie pelicula)
         fseek(archivoBin , (long) (-1) * sizeof(pelicula), SEEK_CUR);
         fflush(stdin);
         fwrite(&pelicula,sizeof(pelicula),1,archivoBin);
-        printf("la peli se borro");
+        printf("la peli se borro\n");
         break;
       }
     }
@@ -82,8 +83,9 @@ int  modificaPelicula(FILE *archivobinario,EMovie pelicula)
     char seguir='s';
     int cant,opcion;
     system("cls");
-    imprime("---------------Lista de peliculas------------------\n");
+    imprime("---------------Lista de peliculas------------------\n\n");
     imprimeLista(archivobinario,pelicula);
+    imprime("\n\n---------------Modifica peliculas------------------\n\n");
     imprime("Ingrese NOMBRE de la pelicula que desee modificar:\n");
     setbuf(stdin,NULL);
     scanf("%[^\n]",nombreAux);
@@ -94,6 +96,7 @@ int  modificaPelicula(FILE *archivobinario,EMovie pelicula)
 
       if(cant!=1){
          if(feof(archivobinario)){
+            imprime("rompe");
 			break;
          }
          else{
@@ -132,8 +135,7 @@ int  modificaPelicula(FILE *archivobinario,EMovie pelicula)
                         scanf("%[^\n]",pelicula.genero);
                         break;
                     case 4:
-                        imprime("INGRESE NUEVA DURACION");
-                        scanf("%d",&pelicula.duracion);
+                        pelicula.duracion=getValidInt("Ingrese la duracion de la pelicula en minutos: \n","El valor ingresado es incorrecto",45,180);
                         break;
                     case 5:
                         seguir = 'n';
@@ -231,8 +233,8 @@ void harcodeaPeliculas(EMovie pelicula, FILE *archivoBinario)
     pelicula.estado=1;
 
     fwrite(&pelicula,sizeof(pelicula),2,archivoBinario);
-
-
+    system("cls");
+    imprime("Se harcodeo  3 peliculas a modo de prueba\n\n");
 }
 
 void imprimeFinalTXT(FILE *archivoTexto)

@@ -41,10 +41,12 @@ void imprimeLista(FILE*archivoBin,EMovie pelicula);
 
 int  modificaPelicula(FILE *archivoTexto,EMovie pelicula);
 
+
 void harcodeaPeliculas(EMovie pelicula, FILE *archivoBinario);
 
 void imprimeMenu();
 void imprimeMenuModificar();
 
 void imprime(char texto[1000]);
+
 #endif // FUNCIONES_H_INCLUDED

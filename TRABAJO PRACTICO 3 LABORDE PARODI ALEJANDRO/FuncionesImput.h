@@ -1,8 +1,4 @@
 
-
-int getString(char cadena[], int tamanio);
-
-
 /**
  * \brief Solicita un n˙mero al usuario y devuelve el resultado
  * \param mensaje Es el mensaje a ser mostrado
@@ -18,6 +14,9 @@ float getFloat(char mensaje[]);
  *
  */
 int getInt(char mensaje[]);
+
+int getValidInt(char requestMessage[],char errorMessage[], int lowLimit, int hiLimit);
+
 
 /**
  * \brief Solicita un caracter al usuario y devuelve el resultado
@@ -85,7 +84,7 @@ int esTelefono(char str[]);
  * \param input Array donde se cargar· el texto ingresado
  * \return void
  */
-int getString(char mensaje[],char input[]);
+void getString(char mensaje[],char input[]);
 
 /**
  * \brief Solicita un texto al usuario y lo devuelve (acpeta espacios)
