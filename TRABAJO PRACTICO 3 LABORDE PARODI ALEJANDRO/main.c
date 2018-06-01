@@ -3,7 +3,7 @@
 #include <string.h>
 #include "funcionesTP3.h"
 #define ARCHIVOBINARIO ".\\PeliculasBinario.dat"
-#define ARCHIVOTEXTO ".\\PeliculasTexto.txt"
+#define ARCHIVOTEXTO ".\\PeliculasTexto.html"
 
 
 int main()
@@ -14,9 +14,6 @@ int main()
 
     FILE*archivoBin;
     EMovie pelicula;
-
-  //abreArchivo(FILE *archivo)
-
 
     if ((archivoBin=fopen(ARCHIVOBINARIO,"rb+"))==NULL)
     {

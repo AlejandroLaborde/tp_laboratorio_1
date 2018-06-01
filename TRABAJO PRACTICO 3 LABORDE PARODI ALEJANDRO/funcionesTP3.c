@@ -12,24 +12,22 @@ int agregarPelicula(EMovie pelicula, FILE*archivoBin)
     imprime("--------------------------INGRESO DE NUEVA PELICULA------------------------- \n");
     imprime("Ingrese Nombre de la pelicula: \n");
     setbuf(stdin,NULL);
-    scanf("%s", pelicula.titulo);
+    scanf("%[^\n]",pelicula.titulo);
     setbuf(stdin,NULL);
     imprime("Ingrese el genero de la pelicula: \n");
-    scanf("%s",pelicula.genero);
-
+    scanf("%[^\n]",pelicula.genero);
     imprime("Ingrese la duracion de la pelicula: \n");
     scanf("%d",&pelicula.duracion);
     setbuf(stdin,NULL);
     imprime("Ingrese la descripcion: \n");
-    scanf("%s",pelicula.descripcion);
-
+    scanf("%[^\n]",pelicula.descripcion);
     imprime("Ingrese el puntaje de la pelicula: \n");
     scanf("%d",&pelicula.puntaje);
     setbuf(stdin,NULL);
     imprime("Ingrese el link de la imagen de portada de la pelicula: \n");
     scanf("%s",pelicula.linkImagen);
-
     pelicula.estado=1;
+
 
     fwrite(&pelicula,sizeof(pelicula),1,archivoBin);
 
@@ -45,11 +43,13 @@ int borrarPelicula(FILE*archivoBin,EMovie pelicula)
     imprime("--------------------------ELIMINA PELICULA------------------------- \n");
     char peliculaAux[20];
     int cantidad;
-    rewind(archivoBin);
-    imprimeLista(archivoBin,pelicula);
-    printf("Ingrese el nombre de la pelicula que desea borrar");
-    scanf("%s",peliculaAux);
 
+    imprimeLista(archivoBin,pelicula);
+    printf("Ingrese el nombre de la pelicula que desea borrar:  ");
+    setbuf(stdin,NULL);
+    scanf("%[^\n]",peliculaAux);
+
+    rewind(archivoBin);
     while(!feof(archivoBin)){
       cantidad = fread(&pelicula,sizeof(pelicula),1,archivoBin);
 
@@ -66,7 +66,6 @@ int borrarPelicula(FILE*archivoBin,EMovie pelicula)
       if(strcmp (peliculaAux,pelicula.titulo)==0){
 
         pelicula.estado=0;
-
         fseek(archivoBin , (long) (-1) * sizeof(pelicula), SEEK_CUR);
         fflush(stdin);
         fwrite(&pelicula,sizeof(pelicula),1,archivoBin);
@@ -77,17 +76,90 @@ int borrarPelicula(FILE*archivoBin,EMovie pelicula)
     return 0 ;
 }
 
-int  modificaPelicula(FILE *archivoTexto,EMovie pelicula)
+int  modificaPelicula(FILE *archivobinario,EMovie pelicula)
 {
+    char nombreAux[50];
+    char seguir='s';
+    int cant,opcion;
+    system("cls");
+    imprime("---------------Lista de peliculas------------------\n");
+    imprimeLista(archivobinario,pelicula);
+    imprime("Ingrese NOMBRE de la pelicula que desee modificar:\n");
+    setbuf(stdin,NULL);
+    scanf("%[^\n]",nombreAux);
 
-return 0;
+    rewind(archivobinario);
+    while(!feof(archivobinario)){
+      cant = fread(&pelicula,sizeof(pelicula),1,archivobinario);
+
+      if(cant!=1){
+         if(feof(archivobinario)){
+			break;
+         }
+         else{
+			printf("No llego a leer el ultimo registro");
+			break;
+         }
+      }
+
+        if(strcmp (nombreAux,pelicula.titulo)==0)
+        {
+            printf("%s\n",pelicula.titulo);
+            if(pelicula.estado==1)
+            {
+                while(seguir=='s')
+                {
+                    setbuf(stdin,NULL);
+                    imprimeMenuModificar();
+                    scanf("%d",&opcion);
+
+                    switch(opcion)
+                    {
+                    case 1:
+                        imprime("INGRESE NUEVO TITULO");
+                        setbuf(stdin,NULL);
+                        scanf("%[^\n]",pelicula.titulo);
+                        break;
+
+                    case 2:
+                        imprime("INGRESE NUEVA DESCRIPCION");
+                        setbuf(stdin,NULL);
+                        scanf("%[^\n]",pelicula.descripcion);
+                        break;
+                    case 3:
+                        imprime("INGRESE NUEVO GENERO");
+                        setbuf(stdin,NULL);
+                        scanf("%[^\n]",pelicula.genero);
+                        break;
+                    case 4:
+                        imprime("INGRESE NUEVA DURACION");
+                        scanf("%d",&pelicula.duracion);
+                        break;
+                    case 5:
+                        seguir = 'n';
+                        break;
+                    default:
+                        imprime("LA OPCION INGRESADA ES INCORRECTA,INGRESE NUEVAMENTE");
+                    }
+                }
+                fseek(archivobinario , (long) (-1) * sizeof(pelicula), SEEK_CUR);
+                setbuf(stdin,NULL);
+                fwrite(&pelicula,sizeof(pelicula),1,archivobinario);
+                printf("-----------------salimos de la modificacion--------------\n");
+                break;
+            }
+        }
+    }
+
+
+
+    return 0;
 }
-
-void generarPagina(FILE * archivoBin,EMovie pelicula)
+void generarPagina(FILE * archivobinario,EMovie pelicula)
 {
     FILE* archivoTexto;
     int cant;
-    rewind(archivoBin);
+    rewind(archivobinario);
 
     if ((archivoTexto=fopen(ARCHIVOTEXTO,"wb+"))==NULL){
         imprime("No se pudo abrir el archivo de texto");
@@ -95,12 +167,12 @@ void generarPagina(FILE * archivoBin,EMovie pelicula)
       }
 
 
-    while(!feof(archivoBin))
+    while(!feof(archivobinario))
     {
-        cant=fread(&pelicula,sizeof(pelicula),1,archivoBin);
+        cant=fread(&pelicula,sizeof(pelicula),1,archivobinario);
         if(cant!=1)
         {
-            if(feof(archivoBin))
+            if(feof(archivobinario))
             {
                 imprime("Todas las peliculas ya fueron listadas!!\n");
                 break;
@@ -187,9 +259,9 @@ void imprimeCuerpoTXT(FILE *archivoTexto,EMovie pelicula)
 
 void imprimeCabezeraTXT(FILE *archivoTexto)
 {
-    fprintf(archivoTexto,"%s","<!DOCTYPE html>\n<!-- Template by Quackit.com -->\n<html lang='en'>\n<head>\n <meta charset='utf-8'>\n<meta http-equiv='X-UA-Compatible' content='IE=edge'>\n");
-    fprintf(archivoTexto,"%s","<meta name='viewport' content='width=device-width, initial-scale=1'>\n<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->\n<title>Lista peliculas</title>\n");
-    fprintf(archivoTexto,"%s","<!-- Bootstrap Core CSS -->\n<link href='css/bootstrap.min.css' rel='stylesheet'>\n<!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->\n<link href='css/custom.css' rel='stylesheet'>\n  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n<!--[if lt IE 9]>\n<script src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'></script>\n<script src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js'></script>\n    <![endif]-->\n</head>\n<body>\n    <div class='container'>\n<div class='row'>\n");
+    fprintf(archivoTexto,"<!DOCTYPE html>\n<!-- Template by Quackit.com -->\n<html lang='en'>\n<head>\n <meta charset='utf-8'>\n<meta http-equiv='X-UA-Compatible' content='IE=edge'>\n");
+    fprintf(archivoTexto,"<meta name='viewport' content='width=device-width, initial-scale=1'>\n<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->\n<title>Lista peliculas</title>\n");
+    fprintf(archivoTexto,"<!-- Bootstrap Core CSS -->\n<link href='css/bootstrap.min.css' rel='stylesheet'>\n<!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->\n<link href='css/custom.css' rel='stylesheet'>\n  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n<!--[if lt IE 9]>\n<script src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'></script>\n<script src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js'></script>\n    <![endif]-->\n</head>\n<body>\n    <div class='container'>\n<div class='row'>\n");
 
 }
 
@@ -203,31 +275,44 @@ void imprimeMenu()
         imprime("9- HARCODEO DE DATOS INICIALES, UTILIZAR SOLO A MODO DE PRUEBA\n");
         imprime("5- Salir\n");
 }
+void imprimeMenuModificar()
+{
+        imprime("1- Modificar titulo\n");
+        imprime("2- Modificar descripcion \n");
+        imprime("3- Modificar genero\n");
+        imprime("4- Modificar duracion\n");
+        imprime("5- Salir\n");
+
+}
 
 void imprime(char texto[1000]){
 
     printf("%s",texto);
 }
-void imprimeLista(FILE*archivoBin,EMovie pelicula)
-{
-    int cant;
-    while(!feof(archivoBin))
+    void imprimeLista(FILE*archivoBin,EMovie pelicula)
     {
-        cant = fread(&pelicula,sizeof(pelicula),1,archivoBin);
-        if(cant!=1)
+        int cant;
+        int contador=0;
+        rewind(archivoBin);
+        while(!feof(archivoBin))
         {
-            if(feof(archivoBin))
+            cant = fread(&pelicula,sizeof(pelicula),1,archivoBin);
+            if(cant!=1)
             {
+                if(feof(archivoBin))
+                {
                     break;
+                }
+                else
+                {
+                    printf("No leyo el ultimo registro");
+                    break;
+                }
             }
-            else
-            {
-                printf("No leyo el ultimo registro");
-                break;
-            }
+            if(pelicula.estado==1)
+                printf("%d -%s\n",contador,pelicula.titulo);
+            contador++;
+
         }
-        if(pelicula.estado==1)
-        printf("%s\n",pelicula.titulo);
 
     }
-}
