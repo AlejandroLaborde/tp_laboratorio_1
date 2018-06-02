@@ -96,7 +96,7 @@ int  modificaPelicula(FILE *archivobinario,EMovie pelicula)
 
       if(cant!=1){
          if(feof(archivobinario)){
-            imprime("rompe");
+            imprime("No se encontro la pelicula buscada, se cancela la modificacion\n\n");
 			break;
          }
          else{
