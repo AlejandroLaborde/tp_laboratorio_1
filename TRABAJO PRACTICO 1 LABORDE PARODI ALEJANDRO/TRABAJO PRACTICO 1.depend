@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1536179566 source:e:\segunda vez que curso lab\trabajo practico 1\funcionesprimertp.c
+	<stdio.h>
+	<stdlib.h>
+	"FuncionesPrimerTP.h"
+	<stdbool.h>
+
+1536179554 e:\segunda vez que curso lab\trabajo practico 1\funcionesprimertp.h
+
+1536179516 source:e:\segunda vez que curso lab\trabajo practico 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"FuncionesPrimerTP.h"
+	<stdbool.h>
+
+1536202280 source:i:\segunda vez que curso lab\trabajo practico 1\funcionesprimertp.c
+	<stdio.h>
+	<stdlib.h>
+	"FuncionesPrimerTP.h"
+	<stdbool.h>
+
+1536179554 i:\segunda vez que curso lab\trabajo practico 1\funcionesprimertp.h
+
+1536201864 source:i:\segunda vez que curso lab\trabajo practico 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"FuncionesPrimerTP.h"
+	<stdbool.h>
+
