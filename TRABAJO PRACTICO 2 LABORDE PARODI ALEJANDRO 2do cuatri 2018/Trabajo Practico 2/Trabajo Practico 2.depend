@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1538319816 source:i:\segunda vez que curso lab\trabajo practico 2 laborde parodi alejandro\trabajo practico 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayEmployees.h.h"
+	<ctype.h>
+
+1537105074 i:\segunda vez que curso lab\trabajo practico 2 laborde parodi alejandro\trabajo practico 2\funcionestp2.h
+
+1537105074 source:i:\segunda vez que curso lab\trabajo practico 2 laborde parodi alejandro\trabajo practico 2\funcionestp2.c
+	<stdio.h>
+	<stdlib.h>
+	"FuncionesTP2.h"
+	<ctype.h>
+
+1538319704 source:i:\segunda vez que curso lab\trabajo practico 2 laborde parodi alejandro\trabajo practico 2\arrayemployees.c.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayEmployees.h.h"
+	<ctype.h>
+	<string.h>
+
+1538316928 i:\segunda vez que curso lab\trabajo practico 2 laborde parodi alejandro\trabajo practico 2\arrayemployees.h.h
+
+1537185964 source:f:\segunda vez que curso lab\trabajo practico 2 laborde parodi alejandro\trabajo practico 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayEmployees.h.h"
+	<ctype.h>
+
+1537185634 f:\segunda vez que curso lab\trabajo practico 2 laborde parodi alejandro\trabajo practico 2\arrayemployees.h.h
+
+1537140418 source:f:\segunda vez que curso lab\trabajo practico 2 laborde parodi alejandro\trabajo practico 2\arrayemployees.c.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayEmployees.h.h"
+	<ctype.h>
+	<string.h>
+
+1538176982 source:e:\segunda vez que curso lab\trabajo practico 2 laborde parodi alejandro\trabajo practico 2\arrayemployees.c.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayEmployees.h.h"
+	<ctype.h>
+	<string.h>
+
+1538176940 e:\segunda vez que curso lab\trabajo practico 2 laborde parodi alejandro\trabajo practico 2\arrayemployees.h.h
+
+1538174332 source:e:\segunda vez que curso lab\trabajo practico 2 laborde parodi alejandro\trabajo practico 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayEmployees.h.h"
+	<ctype.h>
+
