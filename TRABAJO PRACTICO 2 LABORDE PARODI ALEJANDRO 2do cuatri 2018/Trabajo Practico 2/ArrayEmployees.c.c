@@ -181,7 +181,7 @@ int sortEmployees(Employee* list, int len, int order)
                     }
 
                 }
-            }printf("%d",list[i].isEmpty);
+            }
         }
 
         printEmployees(list,len);
