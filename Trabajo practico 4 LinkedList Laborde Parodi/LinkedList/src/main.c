@@ -26,24 +26,24 @@
 
 int main(void)
 {
-//    startTesting(1);  // ll_newLinkedList
-//    startTesting(2);  // ll_len
-//    startTesting(3);  // getNode - test_getNode
-//    startTesting(4);  // addNode - test_addNode
-//    startTesting(5);  // ll_add
-//    startTesting(6);  // ll_get
-//    startTesting(7);  /* ll_set*/ /// no me carga en caso de ser la ultima posicion
-//    startTesting(8);  // ll_remove
-//    startTesting(9);  // ll_clear
-//    startTesting(10); /* ll_deleteLinkedList*/ ///Puedo eliminar directo la lista sin vaciarla
-//    startTesting(11); // ll_indexOf
-//    startTesting(12); // ll_isEmpty
-//    startTesting(13); /* ll_push*/ /// ver porque es igual al add node
-//   startTesting(14); // ll_pop
-//    startTesting(15); // ll_contains
-//    startTesting(16); // ll_containsAll
-//    startTesting(17); /* ll_subList*/ ///no entiendo porque tiene que ser "=" ll_len
-//    startTesting(18); // ll_clone
+    startTesting(1);  // ll_newLinkedList
+    startTesting(2);  // ll_len
+    startTesting(3);  // getNode - test_getNode
+    startTesting(4);  // addNode - test_addNode
+    startTesting(5);  // ll_add
+    startTesting(6);  // ll_get
+    startTesting(7);  /* ll_set*/ /// no me carga en caso de ser la ultima posicion
+    startTesting(8);  // ll_remove
+    startTesting(9);  // ll_clear
+    startTesting(10); /* ll_deleteLinkedList*/ ///Puedo eliminar directo la lista sin vaciarla
+    startTesting(11); // ll_indexOf
+    startTesting(12); // ll_isEmpty
+    startTesting(13); /* ll_push*/ /// ver porque es igual al add node
+   startTesting(14); // ll_pop
+    startTesting(15); // ll_contains
+    startTesting(16); // ll_containsAll
+    startTesting(17); /* ll_subList*/ ///no entiendo porque tiene que ser "=" ll_len
+    startTesting(18); // ll_clone
       startTesting(19); // ll_sort
 
     return 0;
