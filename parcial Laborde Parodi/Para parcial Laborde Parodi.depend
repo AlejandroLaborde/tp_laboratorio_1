@@ -1,0 +1,111 @@
+# depslib dependency file v1.0
+1543696766 source:c:\documents and settings\ale\escritorio\para parcial laborde parodi\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"FuncionesLPA.h"
+
+1543698153 c:\documents and settings\ale\escritorio\para parcial laborde parodi\linkedlist.h
+
+1543695934 c:\documents and settings\ale\escritorio\para parcial laborde parodi\employee.h
+
+1533133022 c:\documents and settings\ale\escritorio\para parcial laborde parodi\parser.h
+
+1540756370 c:\documents and settings\ale\escritorio\para parcial laborde parodi\funcioneslpa.h
+
+1543696650 source:c:\documents and settings\ale\escritorio\para parcial laborde parodi\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"FuncionesLPA.h"
+
+1541360432 c:\documents and settings\ale\escritorio\para parcial laborde parodi\controller.h
+
+1543695636 source:c:\documents and settings\ale\escritorio\para parcial laborde parodi\funcioneslpa.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1543698360 source:c:\documents and settings\ale\escritorio\para parcial laborde parodi\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1543699081 source:c:\documents and settings\ale\escritorio\para parcial laborde parodi\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1543698436 source:c:\documents and settings\ale\escritorio\para parcial laborde parodi\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"FuncionesLPA.h"
+
+1544138297 source:c:\users\alumno\desktop\para parcial laborde parodi\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"FuncionesLPA.h"
+
+1543698154 c:\users\alumno\desktop\para parcial laborde parodi\linkedlist.h
+
+1544138086 c:\users\alumno\desktop\para parcial laborde parodi\employee.h
+
+1533133022 c:\users\alumno\desktop\para parcial laborde parodi\parser.h
+
+1540756370 c:\users\alumno\desktop\para parcial laborde parodi\funcioneslpa.h
+
+1544138087 source:c:\users\alumno\desktop\para parcial laborde parodi\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"FuncionesLPA.h"
+
+1544135210 c:\users\alumno\desktop\para parcial laborde parodi\controller.h
+
+1543698362 source:c:\users\alumno\desktop\para parcial laborde parodi\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1544133749 source:c:\users\alumno\desktop\para parcial laborde parodi\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1544135210 source:c:\users\alumno\desktop\para parcial laborde parodi\funcioneslpa.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1544139284 source:c:\users\alumno\desktop\para parcial laborde parodi\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"FuncionesLPA.h"
+
